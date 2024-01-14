@@ -1,7 +1,19 @@
 export const NuevoPresupuesto = () => {
   return (
-    <div>
-      <h2>NuevoPresupuesto</h2>
+    <div className="contenedor-presupuesto contenedor sombra">
+      <form className="formulario">
+        <div className="campo">
+          <label>Definir Presupuesto</label>
+
+          <input
+            type="text"
+            className="nuevo-presupuesto"
+            placeholder="Añade tu Presupuesto"
+          />
+        </div>
+
+        <input type="submit" value="Añadir" />
+      </form>
     </div>
   );
 };
