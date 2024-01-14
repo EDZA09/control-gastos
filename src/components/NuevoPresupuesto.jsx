@@ -1,3 +1,7 @@
 export const NuevoPresupuesto = () => {
-  return <div>NuevoPresupuesto</div>;
+  return (
+    <div>
+      <h2>NuevoPresupuesto</h2>
+    </div>
+  );
 };
