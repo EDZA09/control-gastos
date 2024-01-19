@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
+  const [mensaje, setMensaje] = useState("");
+
   const handlePresupuesto = (event) => {
     event.preventDefault();
 
