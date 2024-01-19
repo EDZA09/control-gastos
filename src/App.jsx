@@ -7,7 +7,12 @@ function App() {
 
   return (
     <div>
-      <Header presupuesto={presupuesto} setPresupuesto={setPresupuesto} />
+      <Header
+        presupuesto={presupuesto}
+        setPresupuesto={setPresupuesto}
+        isValidPresupuesto={isValidPresupuesto}
+        setIsValidPresupuesto={setIsValidPresupuesto}
+      />
     </div>
   );
 }
