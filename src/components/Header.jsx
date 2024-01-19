@@ -9,11 +9,16 @@ export const Header = ({
   return (
     <header>
       <h1>Planificador de Gastos</h1>
-      <NuevoPresupuesto
-        presupuesto={presupuesto}
-        setPresupuesto={setPresupuesto}
-        setIsValidPresupuesto={setIsValidPresupuesto}
-      />
+
+      {isValidPresupuesto ? (
+        <p>Control de Presupuesto</p>
+      ) : (
+        <NuevoPresupuesto
+          presupuesto={presupuesto}
+          setPresupuesto={setPresupuesto}
+          setIsValidPresupuesto={setIsValidPresupuesto}
+        />
+      )}
     </header>
   );
 };
