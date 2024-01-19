@@ -8,7 +8,7 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
     event.preventDefault();
 
     if (!Number(presupuesto) || presupuesto < 0) {
-      setMensaje("No es un presupuesto");
+      setMensaje("No es un presupuesto Válido");
     } else {
       setMensaje("Si es un presupuesto");
     }
@@ -31,7 +31,7 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
 
         <input type="submit" value="Añadir" />
 
-        {mensaje && <Mensaje>{mensaje}</Mensaje>}
+        {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
       </form>
     </div>
   );
