@@ -1,6 +1,12 @@
 export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
   const handlePresupuesto = (event) => {
     event.preventDefault();
+
+    if (!Number(presupuesto) || presupuesto < 0) {
+      console.log("No es un presupuesto");
+    } else {
+      console.log("Si es un presupuesto");
+    }
   };
 
   return (
