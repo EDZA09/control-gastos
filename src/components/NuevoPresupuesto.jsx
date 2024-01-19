@@ -9,9 +9,9 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
 
     if (!Number(presupuesto) || presupuesto < 0) {
       setMensaje("No es un presupuesto Válido");
-    } else {
-      setMensaje("Si es un presupuesto");
+      return;
     }
+    setMensaje("");
   };
 
   return (
@@ -25,7 +25,7 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
             className="nuevo-presupuesto"
             placeholder="Añade tu Presupuesto"
             value={presupuesto}
-            onChange={(event) => setPresupuesto(event.target.value)}
+            onChange={(event) => setPresupuesto(Number(event.target.value))}
           />
         </div>
 
