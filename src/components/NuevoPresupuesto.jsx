@@ -7,7 +7,7 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
   const handlePresupuesto = (event) => {
     event.preventDefault();
 
-    if (!Number(presupuesto) || presupuesto < 0) {
+    if (!presupuesto || presupuesto < 0) {
       setMensaje("No es un presupuesto Válido");
       return;
     }
@@ -21,7 +21,7 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
           <label>Definir Presupuesto</label>
 
           <input
-            type="text"
+            type="number"
             className="nuevo-presupuesto"
             placeholder="Añade tu Presupuesto"
             value={presupuesto}
