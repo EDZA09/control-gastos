@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Mensaje } from "./Mensaje";
 
-export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
+export const NuevoPresupuesto = ({
+  presupuesto,
+  setPresupuesto,
+  setIsValidPresupuesto,
+}) => {
   const [mensaje, setMensaje] = useState("");
 
   const handlePresupuesto = (event) => {
@@ -12,6 +16,7 @@ export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
       return;
     }
     setMensaje("");
+    setIsValidPresupuesto(true);
   };
 
   return (
