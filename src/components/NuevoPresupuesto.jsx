@@ -1,7 +1,11 @@
 export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
+  const handlePresupuesto = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="contenedor-presupuesto contenedor sombra">
-      <form className="formulario">
+      <form onSubmit={handlePresupuesto} className="formulario">
         <div className="campo">
           <label>Definir Presupuesto</label>
 
