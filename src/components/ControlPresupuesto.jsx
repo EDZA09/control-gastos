@@ -1,5 +1,16 @@
 import React from "react";
 
 export const ControlPresupuesto = () => {
-  return <div>ControlPresupuesto</div>;
+  return (
+    <div className="contenedor-presupuesto contenedor sombra dos-columnas">
+      <div>
+        <p>Gr&aacute;fica Aqu&iacute;</p>
+      </div>
+      <div className="contenido-presupuesto">
+        <p>
+          <span>Presupuesto: </span>$200
+        </p>
+      </div>
+    </div>
+  );
 };
