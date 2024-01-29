@@ -6,6 +6,8 @@ function App() {
   const [presupuesto, setPresupuesto] = useState(0);
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false);
 
+  const handleNuevoGasto = () => {};
+
   return (
     <div>
       <Header
@@ -18,6 +20,7 @@ function App() {
       {isValidPresupuesto && (
         <div className="nuevo-gasto">
           <img src={IconoNuevoGasto} alt="icono nuevo gasto" />
+          onClick = {handleNuevoGasto}
         </div>
       )}
     </div>
