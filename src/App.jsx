@@ -37,7 +37,13 @@ function App() {
         </div>
       )}
 
-      {modal && <Modal setModal={setModal} animarModal={animarModal} />}
+      {modal && (
+        <Modal
+          setModal={setModal}
+          animarModal={animarModal}
+          setAnimarModal={setAnimarModal}
+        />
+      )}
     </div>
   );
 }
