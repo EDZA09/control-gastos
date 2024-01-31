@@ -1,8 +1,9 @@
 import CerrarBtn from "../assets/img/cerrar.svg";
 
-export const Modal = () => {
+export const Modal = ({ setModal }) => {
   const ocultarModal = () => {
     console.log("Cerrar modal");
+    setModal(false);
   };
   return (
     <div className="modal">
