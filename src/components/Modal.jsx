@@ -11,6 +11,8 @@ export const Modal = ({ setModal }) => {
       <div className="cerrar-modal">
         <img src={CerrarBtn} alt="cerrar modal" onClick={ocultarModal} />
       </div>
+
+      <form className="formulario"></form>
     </div>
   );
 };
