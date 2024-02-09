@@ -28,6 +28,8 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
             type="text"
             id="nombre"
             placeholder="Añade el Nombre del Gasto"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
           />
         </div>
 
