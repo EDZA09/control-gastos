@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import CerrarBtn from "../assets/img/cerrar.svg";
 
 export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
+  const [nombre, setNombre] = useState("");
+
   const ocultarModal = () => {
     setAnimarModal(false);
 
