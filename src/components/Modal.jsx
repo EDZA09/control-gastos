@@ -5,6 +5,7 @@ import CerrarBtn from "../assets/img/cerrar.svg";
 export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
   const [nombre, setNombre] = useState("");
   const [cantidad, setCantidad] = useState(0);
+  const [categoria, setCategoria] = useState("");
 
   const ocultarModal = () => {
     setAnimarModal(false);
@@ -49,7 +50,11 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
         <div className="campo">
           <label htmlFor="categoria">Cantidad</label>
 
-          <select id="categoria">
+          <select
+            id="categoria"
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
             <option value="">-- Seleccione --</option>
             <option value="ahorro">Ahorro</option>
             <option value="comida">Comida</option>
@@ -61,7 +66,7 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
           </select>
         </div>
 
-        <input type="submit" values="Añadir Gasto" />
+        <input type="submit" value="Añadir Gasto" />
       </form>
     </div>
   );
