@@ -4,6 +4,7 @@ import CerrarBtn from "../assets/img/cerrar.svg";
 
 export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
   const [nombre, setNombre] = useState("");
+  const [cantidad, setCantidad] = useState(0);
 
   const ocultarModal = () => {
     setAnimarModal(false);
@@ -40,6 +41,8 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
             type="number"
             id="cantidad"
             placeholder="Añade la Cantidad del Gasto: ej. 300"
+            value={cantidad}
+            onChange={(e) => setCantidad(Number(e.target.value))}
           />
         </div>
 
