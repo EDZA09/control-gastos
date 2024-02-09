@@ -51,6 +51,8 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
             <option value="suscripciones">Suscripciones</option>
           </select>
         </div>
+
+        <input type="submit" values="Añadir Gasto" />
       </form>
     </div>
   );
