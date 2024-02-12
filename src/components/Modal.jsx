@@ -14,6 +14,9 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
       setModal(false);
     }, 500);
   };
+
+  const handleSubmit = () => {};
+
   return (
     <div className="modal">
       <p>Desde Modal</p>
@@ -21,7 +24,10 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
         <img src={CerrarBtn} alt="cerrar modal" onClick={ocultarModal} />
       </div>
 
-      <form className={`formulario ${animarModal ? "animar" : "cerrar"}`}>
+      <form
+        onSubmit={handleSubmit}
+        className={`formulario ${animarModal ? "animar" : "cerrar"}`}
+      >
         <legend>Nuevo Gasto</legend>
         <div className="campo">
           <label htmlFor="nombre">Nombre Gasto</label>
