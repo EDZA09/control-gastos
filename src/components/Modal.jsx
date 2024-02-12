@@ -39,6 +39,8 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
         className={`formulario ${animarModal ? "animar" : "cerrar"}`}
       >
         <legend>Nuevo Gasto</legend>
+        {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
+
         <div className="campo">
           <label htmlFor="nombre">Nombre Gasto</label>
 
