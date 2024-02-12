@@ -33,6 +33,8 @@ export const Modal = ({
       }, 3000);
       return;
     }
+
+    guardarGasto({ nombre, cantidad, categoria });
   };
 
   return (
