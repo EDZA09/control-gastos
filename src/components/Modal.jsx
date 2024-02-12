@@ -7,6 +7,8 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
   const [cantidad, setCantidad] = useState(0);
   const [categoria, setCategoria] = useState("");
 
+  const [mensaje, setMensaje] = useState("");
+
   const ocultarModal = () => {
     setAnimarModal(false);
 
@@ -15,7 +17,14 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
     }, 500);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.prevent.default;
+
+    if ([nombre, cantidad, categoria].includes("")) {
+      console.log("");
+      return;
+    }
+  };
 
   return (
     <div className="modal">
