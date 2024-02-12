@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mensaje } from "./Mensaje";
 
+import { generarId } from "../Helpers";
 import CerrarBtn from "../assets/img/cerrar.svg";
 
 export const Modal = ({
