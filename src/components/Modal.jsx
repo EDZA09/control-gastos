@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Mensaje from "./Mensaje";
+import { Mensaje } from "./Mensaje";
 
 import CerrarBtn from "../assets/img/cerrar.svg";
 
@@ -19,10 +19,13 @@ export const Modal = ({ setModal, animarModal, setAnimarModal }) => {
   };
 
   const handleSubmit = (e) => {
-    e.prevent.default;
-
+    e.preventDefault();
     if ([nombre, cantidad, categoria].includes("")) {
       setMensaje("Todos los campos son obligatorios");
+
+      setTimeout(() => {
+        setMensaje("");
+      }, 3000);
       return;
     }
   };
