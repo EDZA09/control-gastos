@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Mensaje from "./Mensaje";
 
 import CerrarBtn from "../assets/img/cerrar.svg";
 
