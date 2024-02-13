@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Modal } from "./components/Modal";
+import ListadoGastos from "./components/ListadoGastos";
 
 import { generarId } from "./helpers";
 
@@ -45,7 +46,9 @@ function App() {
 
       {isValidPresupuesto && (
         <>
-          <main></main>
+          <main>
+            <ListadoGastos />
+          </main>
           <div className="nuevo-gasto">
             <img
               src={IconoNuevoGasto}
