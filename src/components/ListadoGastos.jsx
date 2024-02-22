@@ -6,9 +6,9 @@ const ListadoGastos = ({ gastos }) => {
     <div className="listado-gastos contenedor">
       <h2>{gastos.length ? "Gastos" : "No Hay Gastos aún"}</h2>
 
-      {gastos.map((gasto) => {
-        <Gasto key={gasto.id} gasto={gasto} />;
-      })}
+      {gastos.map((gasto) => (
+        <Gasto key={gasto.id} gasto={gasto} />
+      ))}
     </div>
   );
 };
