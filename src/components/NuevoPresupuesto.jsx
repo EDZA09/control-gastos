@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Mensaje } from "./Mensaje";
+import Mensaje from "./Mensaje";
 
-export const NuevoPresupuesto = ({
+const NuevoPresupuesto = ({
   presupuesto,
   setPresupuesto,
   setIsValidPresupuesto,
@@ -41,3 +41,5 @@ export const NuevoPresupuesto = ({
     </div>
   );
 };
+
+export default NuevoPresupuesto;

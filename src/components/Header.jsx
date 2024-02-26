@@ -1,7 +1,7 @@
-import { NuevoPresupuesto } from "./NuevoPresupuesto";
-import { ControlPresupuesto } from "./ControlPresupuesto";
+import NuevoPresupuesto from "./NuevoPresupuesto";
+import ControlPresupuesto from "./ControlPresupuesto";
 
-export const Header = ({
+const Header = ({
   presupuesto,
   setPresupuesto,
   isValidPresupuesto,
@@ -23,3 +23,5 @@ export const Header = ({
     </header>
   );
 };
+
+export default Header;
