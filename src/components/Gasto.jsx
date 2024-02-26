@@ -9,6 +9,16 @@ import IconoOcio from "../assets/img/icono_ocio.svg";
 import IconoSalud from "../assets/img/icono_salud.svg";
 import IconoSuscripciones from "../assets/img/icono_suscripciones.svg";
 
+const diccionarioIconos = {
+  ahorro: IconoAhorro,
+  comida: IconoComida,
+  casa: IconoCasa,
+  gastos: IconoGastos,
+  ocio: IconoOcio,
+  salud: IconoSalud,
+  suscripciones: IconoSuscripciones,
+};
+
 const Gasto = ({ gasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
   return (
