@@ -5,8 +5,12 @@ export const ControlPresupuesto = ({ presupuesto, gastos }) => {
   const [gastado, setGastado] = useState(0);
 
   useEffect(() => {
-    console.log("Cargando Componente");
-  }, gastos);
+    const totalGastado = gastos.reduce(
+      (total, gasto) => gasto.cantidad + total,
+      0
+    );
+    console.log(totalGastado);
+  }, [gastos]);
 
   const formatearCantidad = (cantidad) => {
     return cantidad.toLocaleString("es-CO", {
