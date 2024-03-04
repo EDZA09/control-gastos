@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 
-export const ControlPresupuesto = ({ presupuesto, gastos }) => {
+const ControlPresupuesto = ({ presupuesto, gastos }) => {
   const [disponible, setDisponible] = useState(0);
   const [gastado, setGastado] = useState(0);
 
   useEffect(() => {
-    const totalGastado = gastos.reduce(
-      (total, gasto) => gasto.cantidad + total,
-      0
-    );
-    console.log(totalGastado);
+    if (gastos.length != 0) {
+      const totalGastado = gastos.reduce(
+        (total, gasto) => gasto.cantidad + total,
+        0
+      );
+      setGastado(totalGastado);
+    }
   }, [gastos]);
 
   const formatearCantidad = (cantidad) => {
@@ -41,3 +43,5 @@ export const ControlPresupuesto = ({ presupuesto, gastos }) => {
     </div>
   );
 };
+
+export default ControlPresupuesto;
