@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 
 export const ControlPresupuesto = ({ presupuesto, gastos }) => {
+  const [disponible, setDisponible] = useState(0);
+  const [gastado, setGastado] = useState(0);
+
   useEffect(() => {
     console.log("Cargando Componente");
   }, gastos);
