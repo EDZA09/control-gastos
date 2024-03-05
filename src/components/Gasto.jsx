@@ -30,7 +30,10 @@ const Gasto = ({ gasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
   return (
     <SwipeableList>
-      <SwipeableListItem>
+      <SwipeableListItem
+        leadingActions={leadingActions}
+        trailingActions={trailingActions}
+      >
         <div className="gasto sombra">
           <div className="contenido-gasto">
             <img src={diccionarioIconos[categoria]} alt="IconoGasto" />
