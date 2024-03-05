@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  LeadingActions,
+  SwipeableList,
+  SwipeableListItem,
+  TrailingActions,
+} from "react-swipeable-list";
+import "react-swipeable-list/dist/styles.css";
 import { formatearFecha } from "../helpers";
 
 import IconoAhorro from "../assets/img/icono_ahorro.svg";
