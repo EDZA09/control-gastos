@@ -28,6 +28,14 @@ const diccionarioIconos = {
 
 const Gasto = ({ gasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
+
+  const leadingActions = () => {
+    console.log("Editar...");
+  };
+  const trailingActions = () => {
+    console.log("Borrar...");
+  };
+
   return (
     <SwipeableList>
       <SwipeableListItem
