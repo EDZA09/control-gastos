@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import ListadoGastos from "./components/ListadoGastos";
@@ -16,6 +16,8 @@ function App() {
 
   const [gastos, setGastos] = useState([]);
   const [gastoEditar, setGastoEditar] = useState({});
+
+  useEffect(() => {}, [gastoEditar]);
 
   const handleNuevoGasto = () => {
     setModal(true);
