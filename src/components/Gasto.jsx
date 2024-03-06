@@ -36,9 +36,13 @@ const Gasto = ({ gasto }) => {
     </LeadingActions>
   );
 
-  const trailingActions = () => {
-    console.log("Borrar...");
-  };
+  const trailingActions = () => (
+    <TrailingActions>
+      <SwipeAction onClick={() => console.log("Eliminar...")}>
+        Eliminar
+      </SwipeAction>
+    </TrailingActions>
+  );
 
   return (
     <SwipeableList>
