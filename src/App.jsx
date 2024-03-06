@@ -17,7 +17,11 @@ function App() {
   const [gastos, setGastos] = useState([]);
   const [gastoEditar, setGastoEditar] = useState({});
 
-  useEffect(() => {}, [gastoEditar]);
+  useEffect(() => {
+    if (Object.keys(gastoEditar).length > 0) {
+      handleNuevoGasto();
+    }
+  }, [gastoEditar]);
 
   const handleNuevoGasto = () => {
     setModal(true);
