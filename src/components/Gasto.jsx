@@ -1,6 +1,7 @@
 import React from "react";
 import {
   LeadingActions,
+  SwipeAction,
   SwipeableList,
   SwipeableListItem,
   TrailingActions,
@@ -29,9 +30,12 @@ const diccionarioIconos = {
 const Gasto = ({ gasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
 
-  const leadingActions = () => {
-    console.log("Editar...");
-  };
+  const leadingActions = () => (
+    <LeadingActions>
+      <SwipeAction onClick={() => console.log("Editar...")}>Editar</SwipeAction>
+    </LeadingActions>
+  );
+
   const trailingActions = () => {
     console.log("Borrar...");
   };
